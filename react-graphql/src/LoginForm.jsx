@@ -18,6 +18,7 @@ const LoginForm= ({notifyError, setToken})=>{
             localStorage.setItem('phonenumbers-user-token',token)
         }
     },[result.data])
+
     const handleSubmit= (event)=>{
         event.preventDefault()
         login({variables: {username, password}})
@@ -25,9 +26,6 @@ const LoginForm= ({notifyError, setToken})=>{
 
     return (
         <div>
-            {
-
-            }
             <form onSubmit={handleSubmit}>
                 <div>
                     username: 

@@ -9,8 +9,8 @@ const schema= new mongoose.Schema({
     },
     friends: [
         {
-            ref: 'Person',
-            type: mongoose.Schema.Types.ObjectId
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Person'
         }
     ]
 })

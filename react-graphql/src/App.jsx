@@ -8,12 +8,13 @@ import { PhoneForm } from './PhoneForm'
 import LoginForm from './LoginForm'
 import { useApolloClient } from '@apollo/client'
 
-
-
 function App() {
+  //query a grapql
   const {data, error, loading}= userPersons()
+
   const [errorMessage, setErrorMessage ] = useState(null)
   const [token, setToken]= useState(()=> localStorage.getItem('phonenumbers-user-token'))
+  
   const client = useApolloClient()
 
   if(error) return <h3 style='color: red'>{[error]}</h3>

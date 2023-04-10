@@ -11,7 +11,6 @@ import { Create_Person } from "./persons/graphql-mutation"
 
     const [ createPerson ] = useMutation(Create_Person, { 
       // refetchQueries: [ { query: ALL_PERSONS }],
-
       onError: (error)=> {
         notifyError(error.graphQLErrors[0].message)
       },

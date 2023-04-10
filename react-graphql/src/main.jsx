@@ -18,7 +18,7 @@ const client= new ApolloClient({
       authorization: getAuth()
     },
   })
-})
+}) 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
